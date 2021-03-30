@@ -11,22 +11,16 @@
 	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/h_airlines","root","hari");
 	Statement st=con.createStatement();
 
-    
-    
+    System.out.print(username+password+password2);  
        int x=0;
     	
     	st.executeUpdate("update admin set password='"+password2+"' where user='"+username+"' ");
    
+    		
+    		if(username.equals("") || password.equals("") ||password2.equals(""))
+    			response.sendRedirect("enter_change_password.jsp");
+    		else 
+    			response.sendRedirect("success_password.html");
     		con.close();
     %>
-    <html>
-    <head><style>
-    body
-     {
-	background-image: url("https://wallpaperaccess.com/full/254391.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
-	}
-	 </style></head>
-    <body><h1>Successfully Changed Password</h1></body>
-    </html>>
+   
