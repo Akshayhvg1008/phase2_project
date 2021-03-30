@@ -128,36 +128,7 @@
   margin: 20px 0;
   font-family: 'Poppins',sans-serif;
 }
-.links{
-  display: flex;
-  cursor: pointer;
-  color: white;
-  margin: 0 0 20px 0;
-}
-.facebook,.instagram{
-  width: 100%;
-  height: 45px;
-  line-height: 45px;
-  margin-left: 10px;
-}
-.facebook{
-  margin-left: 0;
-  background: #4267B2;
-  border: 1px solid #3e61a8;
-}
-.instagram{
-  background: #E1306C;
-  border: 1px solid #df2060;
-}
-.facebook:hover{
-  background: #3e61a8;
-}
-.instagram:hover{
-  background: #df2060;
-}
-.links i{
-  font-size: 17px;
-}
+
 i span{
   margin-left: 8px;
   font-weight: 500;
@@ -183,12 +154,11 @@ i span{
 </head>
 
 <body>
-<h1>${sumessege} </h1>
 	<div class="bg-img" >
 	
 		<div class="content" align="center">
 			<b><header>User Login</header></b>
-			<form action="r_loginverify.jsp" method="post">
+			<form action="user_register" method="post">
 				<div class="field" align="center">
 					<span class="fa fa-user"></span> <input type="text" required
 						placeholder="Email or Phone" name="username">
@@ -198,17 +168,20 @@ i span{
 						class="pass-key" required placeholder="Password" name="password1">
 					
 				</div>
+				<div class="field space" align="center">
+					<span class="fa fa-lock"></span> <input type="text"
+						class="pass-key" required placeholder="name" name="name">
+					
+				</div>
 				<div class="pass">
 					<a href="#">   </a>
 				</div>
 				<div class="field">
-					<input type="submit" name="submit" value="login">
+					<input type="submit" name="submit" value="Register">
 				</div>
 			</form>
 
-			<div class="signup">
-				Don't have account? <a href="user_register.html">Signup Now</a>
-			</div>
+			
 		</div>
 	</div>
 
